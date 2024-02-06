@@ -1,3 +1,4 @@
+import GradeTable from './components/GradeTable';
 import { useAppDispatch } from './hooks/useAppDispatch';
 import { useAppSelector } from './hooks/useAppSelector';
 import useFetchData from './hooks/useFetchData';
@@ -27,7 +28,9 @@ export default function App() {
         </p>
       ) : (
         <>
-          <div className="space-y-6">{/* Visualization */}</div>
+          <div className="space-y-6">
+            <GradeTable loanData={filteredData} />
+          </div>
         </>
       )}
     </main>
