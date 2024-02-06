@@ -1,3 +1,4 @@
+import GradeBarChart from './components/GradeBarChart/GradeBarChart';
 import GradeTable from './components/GradeTable';
 import GradeTableFilter from './components/GradeTableFilter';
 import { setFilters } from './features/loanData/loanDataSlice';
@@ -31,6 +32,7 @@ export default function App() {
       ) : (
         <>
           <div className="space-y-6">
+            <GradeBarChart chartData={filteredData} />
             <GradeTable loanData={filteredData} />
             <GradeTableFilter
               filters={filters}
