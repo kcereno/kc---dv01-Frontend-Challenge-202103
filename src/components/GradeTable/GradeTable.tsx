@@ -1,8 +1,8 @@
 import React from 'react';
-import { LoanDataType } from '../features/loanData/types';
-import { TableDataType, TableRowType } from './ui/Table/types';
-import { convertToDollarString, extractUniqueValues } from '../utils';
-import Table from './ui/Table';
+import { LoanDataType } from '../../features/loanData/types';
+import { TableDataType, TableRowType } from '../ui/Table/types';
+import { convertToDollarString, extractUniqueValues } from '../../utils';
+import Table from '../ui/Table/Table';
 
 type GradeTableProps = {
   loanData: LoanDataType[];

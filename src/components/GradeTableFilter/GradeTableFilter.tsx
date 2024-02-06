@@ -4,10 +4,10 @@ import {
   LoanDataType,
   QuarterEnum,
   TermType,
-} from '../features/loanData/types';
-import { extractUniqueValues } from '../utils';
-import Dropdown from './ui/Dropdown';
-import { DropdownDataType } from './ui/Dropdown/types';
+} from '../../features/loanData/types';
+import { extractUniqueValues } from '../../utils';
+import Dropdown from '../ui/Dropdown/Dropdown';
+import { DropdownDataType } from '../ui/Dropdown/types';
 
 type GradeTableFilterProps = {
   updateFilters: (updatedFilter: FilterType[]) => void;

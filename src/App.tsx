@@ -1,6 +1,6 @@
 import GradeBarChart from './components/GradeBarChart/GradeBarChart';
-import GradeTable from './components/GradeTable';
-import GradeTableFilter from './components/GradeTableFilter';
+import GradeTable from './components/GradeTable/GradeTable';
+import GradeTableFilter from './components/GradeTableFilter/GradeTableFilter';
 import { setFilters } from './features/loanData/loanDataSlice';
 import { useAppDispatch } from './hooks/useAppDispatch';
 import { useAppSelector } from './hooks/useAppSelector';
