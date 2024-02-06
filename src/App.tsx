@@ -1,4 +1,6 @@
 import GradeTable from './components/GradeTable';
+import GradeTableFilter from './components/GradeTableFilter';
+import { setFilters } from './features/loanData/loanDataSlice';
 import { useAppDispatch } from './hooks/useAppDispatch';
 import { useAppSelector } from './hooks/useAppSelector';
 import useFetchData from './hooks/useFetchData';
@@ -30,6 +32,13 @@ export default function App() {
         <>
           <div className="space-y-6">
             <GradeTable loanData={filteredData} />
+            <GradeTableFilter
+              filters={filters}
+              updateFilters={(updatedFilters) => {
+                dispatch(setFilters(updatedFilters));
+              }}
+              loanData={data}
+            />
           </div>
         </>
       )}
