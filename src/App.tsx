@@ -20,30 +20,39 @@ export default function App() {
         dv01 Loan Analysis
       </h1>
 
+      {/* Error */}
       {error && (
         <p className="py-10 text-2xl font-bold tracking-tight text-center">
           There has been an error
         </p>
       )}
-      {loading ? (
+
+      {/* Loading */}
+      {loading && (
         <p className="py-10 text-2xl font-bold tracking-tight text-center">
           Loading Data
         </p>
-      ) : (
-        <>
-          <div className="space-y-6">
+      )}
+
+      <div className="space-y-6">
+        {filteredData.length <= 0 ? (
+          <p className="py-10 text-2xl font-bold tracking-tight text-center">
+            No data found. Please adjust your filters.
+          </p>
+        ) : (
+          <>
             <GradeBarChart chartData={filteredData} />
             <GradeTable loanData={filteredData} />
-            <GradeTableFilter
-              filters={filters}
-              updateFilters={(updatedFilters) => {
-                dispatch(setFilters(updatedFilters));
-              }}
-              loanData={data}
-            />
-          </div>
-        </>
-      )}
+          </>
+        )}
+        <GradeTableFilter
+          filters={filters}
+          updateFilters={(updatedFilters) => {
+            dispatch(setFilters(updatedFilters));
+          }}
+          loanData={data}
+        />
+      </div>
     </main>
   );
 }
