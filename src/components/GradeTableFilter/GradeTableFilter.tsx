@@ -28,21 +28,29 @@ function GradeTableFilter({
         loanData,
         'homeOwnership'
       ) as HomeOwnershipEnum[],
+      value: filters.find((filter) => filter.hasOwnProperty('homeOwnership'))
+        ?.homeOwnership as HomeOwnershipEnum,
     },
     {
       label: 'Quarter',
       id: 'quarter',
       options: extractUniqueValues(loanData, 'quarter') as QuarterEnum[],
+      value: filters.find((filter) => filter.hasOwnProperty('quarter'))
+        ?.quarter as QuarterEnum,
     },
     {
       label: 'Term',
       id: 'term',
       options: extractUniqueValues(loanData, 'term') as TermType[],
+      value: filters.find((filter) => filter.hasOwnProperty('term'))
+        ?.term as TermType,
     },
     {
       label: 'Year',
       id: 'year',
       options: extractUniqueValues(loanData, 'year') as number[],
+      value: filters.find((filter) => filter.hasOwnProperty('year'))
+        ?.year as number,
     },
   ];
 
@@ -64,9 +72,10 @@ function GradeTableFilter({
   };
 
   return (
-    <div className="flex gap-2 justify-center">
+    <div className="flex justify-center gap-2">
       {dropdownData.map((data, index) => (
         <Dropdown
+          value={data.value}
           key={index}
           label={data.label}
           id={data.id}
