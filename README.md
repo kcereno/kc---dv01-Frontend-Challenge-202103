@@ -5,26 +5,13 @@ This is my submission for the dv01 Frontend Engineer Challenge. I have developed
 
 ## Installation
 
-### Option 1: Using the Attached File
-If you have received the project as a compressed file attachment, follow these steps to set it up:
-
-1. **Unzip the Attached File**:
-   - Locate the compressed file (e.g., `kc-dv01 Frontend Challenge 202103.zip`) that you received.
-   - Right-click on the file and select "Extract" or "Unzip."
-   - Choose a destination directory where you want to extract the project files.
-
-
-2. **Navigate to the Extracted Folder**:
-   - After extracting, go to the directory where you extracted the project files. It should contain the project's files and directories.
-
-### Option 2: Cloning from the Online Repository
+Cloning from the Online Repository
 
 ```bash
 git clone https://github.com/kcereno/kc---dv01-Frontend-Challenge-202103.git
 cd kc---dv01-Frontend-Challenge-202103
 ```
 
-### Once the File Is Opened
 Install the required dependencies:
 ```bash
 npm install
