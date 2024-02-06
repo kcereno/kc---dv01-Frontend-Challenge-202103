@@ -14,5 +14,5 @@ export type DropdownDataType = {
   label: string;
   id: string;
   options: DropdownOptionType[];
-  value: DropdownOptionType;
+  value: DropdownOptionType | undefined;
 };

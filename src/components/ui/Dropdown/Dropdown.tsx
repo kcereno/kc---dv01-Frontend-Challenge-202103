@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { FilterType } from '../../../features/loanData/types';
 import { DropdownOptionType } from './types';
 
@@ -7,7 +6,7 @@ type DropDownPropsType = {
   id: string;
   options: DropdownOptionType[];
   onChange: (selectedOption: FilterType) => void;
-  value: DropdownOptionType;
+  value: DropdownOptionType | undefined;
 };
 
 function Dropdown({ label, id, options, onChange, value }: DropDownPropsType) {

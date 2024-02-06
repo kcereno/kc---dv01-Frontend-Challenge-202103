@@ -8,6 +8,7 @@ import {
 import { extractUniqueValues } from '../../utils';
 import Dropdown from '../ui/Dropdown/Dropdown';
 import { DropdownDataType } from '../ui/Dropdown/types';
+import { getValueFromFilters } from './utils';
 
 type GradeTableFilterProps = {
   updateFilters: (updatedFilter: FilterType[]) => void;
@@ -28,29 +29,25 @@ function GradeTableFilter({
         loanData,
         'homeOwnership'
       ) as HomeOwnershipEnum[],
-      value: filters.find((filter) => filter.hasOwnProperty('homeOwnership'))
-        ?.homeOwnership as HomeOwnershipEnum,
+      value: getValueFromFilters<HomeOwnershipEnum>(filters, 'homeOwnership'),
     },
     {
       label: 'Quarter',
       id: 'quarter',
       options: extractUniqueValues(loanData, 'quarter') as QuarterEnum[],
-      value: filters.find((filter) => filter.hasOwnProperty('quarter'))
-        ?.quarter as QuarterEnum,
+      value: getValueFromFilters<QuarterEnum>(filters, 'quarter'),
     },
     {
       label: 'Term',
       id: 'term',
       options: extractUniqueValues(loanData, 'term') as TermType[],
-      value: filters.find((filter) => filter.hasOwnProperty('term'))
-        ?.term as TermType,
+      value: getValueFromFilters<TermType>(filters, 'term'),
     },
     {
       label: 'Year',
       id: 'year',
       options: extractUniqueValues(loanData, 'year') as number[],
-      value: filters.find((filter) => filter.hasOwnProperty('year'))
-        ?.year as number,
+      value: getValueFromFilters<number>(filters, 'year'),
     },
   ];
 
