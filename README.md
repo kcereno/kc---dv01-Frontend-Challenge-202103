@@ -56,32 +56,38 @@ Click the image above to watch a quick video demonstration
 
 Throughout this project, I encountered several challenges and gained valuable insights. Notably, I faced a learning curve when revisiting Redux, understanding its philosophy, and adopting best practices. It was interesting to discover that the principle of immutability, which typically applies to Redux, doesn't directly apply in TypeScript due to Redux Toolkit's utilization of Immer. Additionally, I invested time in thoroughly understanding the nuances of Recharts to effectively render the bar graph.
 
+To provide testing, I had to learn Plawright. React testing library and Cypress did not work well with the existing dependencies.
+
 Furthermore, at the project's outset, I initially assumed that creating an endpoint to fetch data was a requirement. Consequently, I implemented this feature using Express. If you're interested, I'd be happy to share the relevant code with you.
 
-I would have to implemented testing however React Testing Library was not working with Flowbite, the component library I used for development. This can be possbily addressed with another testing library such as Cypress or Playwright.
-
-I would have tested basic features such as fitlering changing the data and bar chart, reset button fuctionality, error and loading state being rendered when appropriate.
 ## Demo
 
 Explore the live demo of this project by visiting the following link: [Demo](https://kc-dv01-frontend-challenge-202103.vercel.app/)
 
 Feel free to click the link to interact with the application and experience its features.
-
 ## Tests
 
-While working on this project, I intended to implement testing to ensure the reliability and functionality of the application. However, I encountered compatibility issues between React Testing Library and Flowbite, the component library I used for development.
+Testing is performed using Playwright, a powerful tool for browser automation. Playwright offers the flexibility to test on three different browsers and provides options to run tests either in headless mode or with a GUI, along with detailed reports for test results. You can find comprehensive documentation on Playwright [here](https://playwright.dev/).
 
-To address this, I plan to explore alternative testing libraries such as Cypress or Playwright, which may better suit the project's requirements.
+### Running Tests
 
-In the testing phase, my focus would include the following areas:
+Ensure your development server is up and running by executing:
+```bash
+npm start
+```
 
-Basic Features Testing: Testing the core functionalities of the application, such as filtering data and updating the bar chart based on user interactions.
+To execute tests in headless mode, use the following command:
+```bash
+npx playwright test
+```
 
-Reset Button Functionality: Ensuring that the reset button effectively resets the application state and returns it to its initial state.
+For running tests with the graphical interface, execute:
 
-Error and Loading States: Verifying that error messages are displayed when appropriate, and that loading states are rendered during data fetching operations.
+```bash
+npx playwright test
+```
 
-While testing is a crucial aspect of software development, adapting to the right tools and frameworks is essential to ensure a smooth and effective testing process.
++ [Watch the UI test  here](https://youtu.be/SddkFk0JV6s).
 ## Tech Stack
 
 **Client:** React, Redux, TailwindCSS, Typescript
