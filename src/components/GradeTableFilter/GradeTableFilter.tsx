@@ -69,7 +69,10 @@ function GradeTableFilter({
   };
 
   return (
-    <div className="flex justify-center gap-2">
+    <div
+      className="flex justify-center gap-2"
+      data-testid="grade-filter"
+    >
       {dropdownData.map((data, index) => (
         <Dropdown
           value={data.value}

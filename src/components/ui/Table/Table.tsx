@@ -32,6 +32,7 @@ function Table({ tableData }: TablePropsType) {
                 <td
                   key={colIndex}
                   className="px-6 py-4"
+                  data-testid="grade-value"
                 >
                   {row[column.accessor]}
                 </td>
