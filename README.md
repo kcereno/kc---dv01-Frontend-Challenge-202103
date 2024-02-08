@@ -84,7 +84,7 @@ npx playwright test
 For running tests with the graphical interface, execute:
 
 ```bash
-npx playwright test
+npx playwright test --ui
 ```
 
 + [Watch the UI test  here](https://youtu.be/SddkFk0JV6s).
