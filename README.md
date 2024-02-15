@@ -1,7 +1,7 @@
 
-# dv01 Frontend Challenge by Karl Cereno    
+# Loan Analysis by Karl Cereno    
 
-This is my submission for the dv01 Frontend Engineer Challenge. I have developed a feature-rich web application to effectively visualize loan data metrics. Leveraging modern technologies such as React, TypeScript, Tailwind CSS, Redux for state management, and Recharts for dynamic bar chart generation, I aimed to create an intuitive and interactive experience for users.
+I have developed a feature-rich web application to effectively visualize loan data metrics. Leveraging modern technologies such as React, TypeScript, Tailwind CSS, Redux for state management, and Recharts for dynamic bar chart generation, I aimed to create an intuitive and interactive experience for users.
 
 ## Installation
 
