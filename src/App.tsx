@@ -16,10 +16,10 @@ export default function App() {
 
   return (
     <main className="flex flex-col items-center min-h-screen pt-20 text-white bg-gray-900">
-      <h1 className="mb-10 text-3xl font-bold tracking-tight">
-        dv01 Loan Analysis
-      </h1>
-
+      <div className="mb-10 text-center ">
+        <h1 className="text-3xl font-bold tracking-tight">Loan Analysis</h1>
+        <p>By Karl Cereno</p>
+      </div>
       {/* Error */}
       {error && (
         <p className="py-10 text-2xl font-bold tracking-tight text-center">
